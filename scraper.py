@@ -37,4 +37,4 @@ for x in range(0, page_number_max):
 f.close()
 
 #start details_scraper
-os.system("python3 details_scraper")
+os.system("python3 details_scraper.py")
