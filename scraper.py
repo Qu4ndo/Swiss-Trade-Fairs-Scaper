@@ -7,7 +7,7 @@ page_number = 1
 
 filename = "buffer.csv"
 b = open(filename, "w")
-headers = "link; company_name; adress; postal; city; country; phone; contact_name; contact_position; contact_link"
+headers = "link; company_name"
 b.write(headers)
 
 for x in range(0, page_number_max):
