@@ -5,6 +5,7 @@ A simple Scraper to get all Exhibitors of the SwissBau-Trade Fare
 ## Setup
 
 Before you can start scraping you have to make sure that pip is installed:
+
 (this command works on most linux distros)
 ```
 sudo apt-get install python-pip
@@ -19,7 +20,8 @@ pip install bs4
 
 
 ## Usage
-Start the script and type in the total number of the Exhibitor-Pages
+Start the script and type in the total number of the Exhibitor-Pages.
+
 After that the data gets downloaded and written to a CSV file
 
 
