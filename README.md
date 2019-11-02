@@ -26,7 +26,6 @@ After that the data gets downloaded and written to a CSV file
 
 
 **Attention:**
-
 To open the CSV file correctly make sure to use the semicolons as separating-option!
 
 
