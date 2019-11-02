@@ -5,12 +5,10 @@ A simple Scraper to get all Exhibitors of the SwissBau-Trade Fare
 ## Setup
 
 Before you can start scraping you have to make sure that pip is installed:
-
+(this command works on most linux distros)
 ```
 sudo apt-get install python-pip
 ```
-(this command works on most distros)
-
 
 
 After that you can install BeautifulSoup with pip:
@@ -26,7 +24,8 @@ After that the data gets downloaded and written to a CSV file
 
 
 **Attention:**
-To open the CSV file correctly make sure to use the semicolons as separating-option because otherwise it will not work with the URL links!
+
+To open the CSV file correctly make sure to use the semicolons as separating-option!
 
 
 ## Output
