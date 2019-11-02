@@ -5,10 +5,10 @@ import csv
 page_number_max = int(input("Maximum Number of Pages on the Website: "))
 page_number = 1
 
-filename = "index_exhibitors.csv"
-f = open(filename, "w")
+filename = "buffer.csv"
+b = open(filename, "w")
 headers = "link; company_name; adress; postal; city; country; phone; contact_name; contact_position; contact_link"
-f.write(headers)
+b.write(headers)
 
 for x in range(0, page_number_max):
     myurl = "https://guide.swissbau.ch/de/aussteller?page=" + str(page_number)
@@ -31,6 +31,6 @@ for x in range(0, page_number_max):
         company_name = container.div.picture.img["alt"]
         #link to profile page
         link = "https://guide.swissbau.ch" + container.div.a["href"]
-        f.write("\n" + link + ";" + company_name)
+        b.write("\n" + link + ";" + company_name)
 
-f.close()
+b.close()
