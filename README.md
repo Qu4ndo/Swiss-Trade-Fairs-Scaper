@@ -1,2 +1,2 @@
-# trade_fare_scrapper
-A simple scrapper to get all exhibitors of a trade fare.
+# SwissBau Scaper
+A simple Scraper to get all Exhibitors of the SwissBau - Trade Fare
