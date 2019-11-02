@@ -23,19 +23,16 @@ for x in range(0, page_number_max):
     #html parser
     page_soup = soup(page_html, "html.parser")
 
-    #grabs each object with the no-image tag & image
+    #grabs each object
     containers = page_soup.findAll("li", {"class":"ngn-content-box ngn-content-box-horizontal ngn-bookmark-button-visible"})
 
     #loop container to get infos and safe to csv
     for container in containers:
         #name of the company
         company_name = container.div.picture.img["alt"]
-        #country of company
-        country_container = container.findAll("div", {"class":"ngn-search-card-country ngn-block"})
-        country = country_container[0].text.strip()
         #link to profile page
         link = "https://guide.swissbau.ch" + container.div.a["href"]
-        f.write("\n" + company_name + ";" + country + ";" + link)
+        f.write("\n" + link + ";" + company_name)
 
 f.close()
 
