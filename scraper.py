@@ -1,14 +1,13 @@
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 import csv
-import os
 
 page_number_max = int(input("Maximum Number of Pages on the Website: "))
 page_number = 1
 
 filename = "index_exhibitors.csv"
 f = open(filename, "w")
-headers = "company_name; country; link"
+headers = "link; company_name; adress; postal; city; country; phone; contact_name; contact_position; contact_link"
 f.write(headers)
 
 for x in range(0, page_number_max):
@@ -35,6 +34,3 @@ for x in range(0, page_number_max):
         f.write("\n" + link + ";" + company_name)
 
 f.close()
-
-#start details_scraper
-os.system("python3 details_scraper.py")
