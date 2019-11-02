@@ -30,9 +30,9 @@ To open the CSV file correctly make sure to use the semicolons as separating-opt
 
 ## Output
 
-The Data will be formated into following output:
+The Data will be formated into following CSV-Output:
 
-(company_name; country; link)
+[company_name; country; link]
 
 
 ## Usecase
