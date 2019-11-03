@@ -32,5 +32,6 @@ for x in range(0, page_number_max):
         #link to profile page
         link = "https://guide.swissbau.ch" + container.div.a["href"]
         b.write("\n" + link + ";" + company_name)
+        print(company_name + ", " + link)
 
 b.close()
