@@ -20,6 +20,7 @@ pip install bs4
 
 
 ## Usage
+
 Start the scraper.py script with this command or with the steps under Usecase:
 ```
 python3 scraper.py
@@ -30,13 +31,13 @@ And choose your fare from the list (with numbers)!
 
 ## Output
 
-**Attention:**
-To open the CSV file correctly make sure to use the semicolons as separating-option!
-
-
 The Data will be formated into following CSV-Output:
 
 [link; company_name; adress; postal; city; country; phone; website; contact_name; contact_position; contact_link]
+
+
+**Attention:**
+To open the CSV file correctly make sure to use the semicolons as separating-option!
 
 
 ## Usecase
