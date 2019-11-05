@@ -1,5 +1,5 @@
-# SwissBau Scaper
-A simple scraper to grab all Exhibitors of some Swiss Fares
+# Swiss Trade-Fairs Scaper
+A simple scraper to grab all Exhibitors of some Swiss Trade-Fairs
 
 
 ## Setup
@@ -26,7 +26,7 @@ Start the scraper.py script with this command or with the steps under Usecase:
 python3 scraper.py
 ```
 
-And choose your fare from the list (with numbers)!
+And choose the right one from the list (with numbers)!
 
 
 ## Output
