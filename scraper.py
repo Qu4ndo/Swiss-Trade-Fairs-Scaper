@@ -6,15 +6,15 @@ import os
 
 #get the right url
 def url():
-    print("Here are the Fare to choose:")
+    print("Here are the Fairs to choose:")
 
     #names of all fairs
-    fare_list = [
+    fair_list = [
     "SwissBau",
     "Igeho"
     ]
 
-    #url of all fares
+    #url of all fairs
     url_list = [
     "https://guide.swissbau.ch",
     "https://guide.igeho.ch"
@@ -22,24 +22,24 @@ def url():
 
     list_number = 1
 
-    #loop print fare names
-    for fare in fare_list:
-        print(str(list_number) + " - " + fare)
+    #loop print fairs names
+    for fair in fair_list:
+        print(str(list_number) + " - " + fair)
         list_number += 1
 
     #choosing the right fare from lists
-    choice_fare = input("Please choose your fare: ")
-    choice_fare = int(choice_fare) - 1
-    fare_url = url_list[choice_fare]
+    choice_fair = input("Please choose your fair: ")
+    choice_fair= int(choice_fair) - 1
+    fair_url = url_list[choice_fair]
 
     #define filename for CSV
-    filename_company = fare_list[choice_fare]
+    filename_company = fair_list[choice_fair]
 
-    return filename_company, fare_url
+    return filename_company, fair_url
 
 
 #grab all basic informations from the website_container
-def get_buffer(fare_url):
+def get_buffer(fair_url):
 
     page_number_max = 100   #increase if not all pages are scraped
     page_number = 1         #first page to start
@@ -50,7 +50,7 @@ def get_buffer(fare_url):
     b.write(headers)
 
     for x in range(0, page_number_max):
-        myurl = fare_url + "/de/aussteller?page=" + str(page_number)
+        myurl = fair_url + "/de/aussteller?page=" + str(page_number)
         page_number += 1
 
         #connencting to site and grabbing content
@@ -69,7 +69,7 @@ def get_buffer(fare_url):
             #name of the company
             company_name = container.div.picture.img["alt"]
             #link to profile page
-            link = fare_url + container.div.a["href"]
+            link = fair_url + container.div.a["href"]
             b.write("\n" + link + ";" + company_name)
             print(company_name + ", " + link)
 
@@ -77,7 +77,7 @@ def get_buffer(fare_url):
 
 
 #grab all detailed inforamtion from the website
-def get_details(filename_company, fare_url):
+def get_details(filename_company, fair_url):
 
     filename_buffer = "buffer.csv"
     b = open(filename_buffer, "r+")
@@ -229,16 +229,16 @@ def get_details(filename_company, fare_url):
 
 
 if __name__ == "__main__":
-    filename_company, fare_url = url()
+    filename_company, fair_url = url()
 
     print("####################################################")
     print("Loading Buffer")
     print("####################################################")
 
-    get_buffer(fare_url)
+    get_buffer(fair_url)
 
     print("####################################################")
     print("Buffer finished - Loading Details")
     print("####################################################")
 
-    get_details(filename_company, fare_url)
+    get_details(filename_company, fair_url)
