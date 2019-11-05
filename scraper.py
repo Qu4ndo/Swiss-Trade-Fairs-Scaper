@@ -232,7 +232,7 @@ if __name__ == "__main__":
     print("Loading Buffer")
     print("####################################################")
 
-    #get_buffer(fare_url)
+    get_buffer(fare_url)
 
     print("####################################################")
     print("Buffer finished - Loading Details")
