@@ -28,11 +28,11 @@ python3 scraper.py
 And choose your fare from the list (with numbers)!
 
 
+## Output
+
 **Attention:**
 To open the CSV file correctly make sure to use the semicolons as separating-option!
 
-
-## Output
 
 The Data will be formated into following CSV-Output:
 
