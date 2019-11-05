@@ -6,22 +6,18 @@ import os
 
 #get the right url
 def url():
-    print("Here are the Fairs to choose:")
+    print("Choose your Trade-Fair:")
 
     #names of all fairs
     fair_list = [
     "SwissBau",
-    "Igeho",
-    "Mefa24",
-    "Holz"
+    "Igeho"
     ]
 
     #url of all fairs
     url_list = [
     "https://guide.swissbau.ch",
-    "https://guide.igeho.ch",
-    "https://www.mefa24.ch",
-    "https://guide.holz.ch"
+    "https://guide.igeho.ch"
     ]
 
     list_number = 1
