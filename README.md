@@ -20,13 +20,12 @@ pip install bs4
 
 
 ## Usage
-Start the scraper.py script with:
+Start the scraper.py script with this command or with the steps under Usecase:
 ```
 python3 scraper.py
 ```
-Or with the steps under Usecase.
 
-Choose your fare from the list (with numbers)!
+And choose your fare from the list (with numbers)!
 
 
 **Attention:**
@@ -38,16 +37,6 @@ To open the CSV file correctly make sure to use the semicolons as separating-opt
 The Data will be formated into following CSV-Output:
 
 [link; company_name; adress; postal; city; country; phone; website; contact_name; contact_position; contact_link]
-
-
-## Optional
-
-If you want do not want to automatically delete the buffer you have to exclude the os.system comment at the end of the scraper.py file:
-
-```
-#os.system("rm buffer.csv")
-
-```
 
 
 ## Usecase
@@ -67,4 +56,14 @@ chmod +x scraper.py
 After that you can simply add a shortcut on your desktop or start it with:
 ```
 ./scraper.py
+```
+
+
+## Optional
+
+If you want do not want to automatically delete the buffer you have to exclude the os.system comment at the end of the scraper.py file:
+
+```
+#os.system("rm buffer.csv")
+
 ```
