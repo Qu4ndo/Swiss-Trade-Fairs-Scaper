@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 import csv
 
-page_number_max = int(input("Maximum Number of Pages on the Website: "))
-page_number = 1
+page_number_max = 100   #increase if not all pages are scraped
+page_number = 1         #first page to start
 
 filename = "buffer.csv"
 b = open(filename, "w")
