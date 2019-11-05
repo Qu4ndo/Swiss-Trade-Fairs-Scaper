@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as uReq
 import csv
+import os
 
 
 #get the right url
@@ -223,6 +224,8 @@ def get_details(filename_company, fare_url):
 
     b.close()
     f.close()
+
+    os.system("rm buffer.csv")
 
 
 if __name__ == "__main__":

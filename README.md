@@ -1,5 +1,5 @@
 # SwissBau Scaper
-A simple scraper to get all Exhibitors of the SwissBau-Trade Fare
+A simple scraper to grab all Exhibitors of some Swiss Fares
 
 
 ## Setup
@@ -20,9 +20,13 @@ pip install bs4
 
 
 ## Usage
-Start the scraper.py script to get all url and company names
+Start the scraper.py script with:
+```
+python3 scraper.py
+```
+Or with the steps under Usecase.
 
-After that you can complete A lot of the profile details with the details_scraper.py
+Choose your fare from the list (with numbers)!
 
 
 **Attention:**
@@ -38,11 +42,7 @@ The Data will be formated into following CSV-Output:
 
 ## Optional
 
-If you want to automatically delete the buffer and/or automatically start the details_scraper.py you have to include the os.system comment at the end of the given file:
-
-```
-#os.system("python3 details_scraper.py"
-```
+If you want do not want to automatically delete the buffer you have to exclude the os.system comment at the end of the scraper.py file:
 
 ```
 #os.system("rm buffer.csv")
