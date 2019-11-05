@@ -20,9 +20,9 @@ pip install bs4
 
 
 ## Usage
-Start the script and type in the total number of the Exhibitor-Pages.
+Start the scraper.py script to get all url and company names
 
-After that the data gets downloaded and written to a CSV file
+After that you can complete A lot of the profile details with the details_scraper.py
 
 
 **Attention:**
@@ -33,7 +33,7 @@ To open the CSV file correctly make sure to use the semicolons as separating-opt
 
 The Data will be formated into following CSV-Output:
 
-[company_name; country; link]
+[link; company_name; adress; postal; city; country; phone; website; contact_name; contact_position; contact_link]
 
 
 ## Usecase
@@ -53,4 +53,18 @@ chmod +x scraper.py
 After that you can simply add a shortcut on your desktop or start it with:
 ```
 ./scraper.py
+```
+
+
+## Optional
+
+If you want to automatically delete the buffer and/or start the details_scraper include the os.system comment at the end of the given file:
+
+```
+#os.system("python3 details_scraper.py"
+```
+
+```
+#os.system("rm buffer.csv")
+
 ```
