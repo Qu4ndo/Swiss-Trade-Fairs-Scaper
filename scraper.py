@@ -11,13 +11,17 @@ def url():
     #names of all fairs
     fair_list = [
     "SwissBau",
-    "Igeho"
+    "Igeho",
+    "Mefa24",
+    "Holz"
     ]
 
     #url of all fairs
     url_list = [
     "https://guide.swissbau.ch",
-    "https://guide.igeho.ch"
+    "https://guide.igeho.ch",
+    "https://www.mefa24.ch",
+    "https://guide.holz.ch"
     ]
 
     list_number = 1
